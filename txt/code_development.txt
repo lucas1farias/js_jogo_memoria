@@ -1,0 +1,36 @@
+
+
+====================================== CONFIGURAÇÃO VISUAL E BACKEND DE VIRAR CARTAS ======================================
+-> Inicialmente, é preciso criar um conjunto de cartões dentro da tag body
+-> Um cartão têm exatamente o layout detalhado abaixo
+-> Como é uma simulação de um jogo de memória, precisamos de uma quantidade x de imagens
+-> Esse x é multiplicado por 2, pois em jogos de memória, temos 2 imagens iguais a serem achadas
+-> Portanto, o conjunto abaixo é repetido 20 vezes
+
+<div class="box">
+  <div class="card" data-character="pessoa-passaro">
+    <div class="front"></div>
+    <div class="back" style="background-image: url(../images/pessoa-passaro.png);"></div>
+  </div>
+</div>
+
+#aa_1: Dados utilizados para definir cada atributo customizado em ".card" e imagem em ".back"
+#aa_2: Duplicação das imagens
+#aa_3: Embaralhamento dos índices do item criado acima
+#aa_4: Criação dos conjuntos de tags mencionados nas setas acima (ainda sem atributos customizados e imagens)
+#aa_5: Captura de todos os elementos div com classe "card" (os 20 elementos criados acima)
+#aa_6: Inserção dos atributos customizáveis ("card") e imagem em cada um dos conjuntos ("back") das 20 cartas
+#aa_7: Aplicar em cada carta, um evento de clique que exibe o fundo da carta e depois esconde
+#aa_8: Css de todos os cartões, que só são possíveis após #aa_4
+#aa_9: Aplicar o giro do cartão no contexto de passar o mouse (contexto mudado para evento de clique)
+
+================================================ MECÂNICA PRINCIPAL DO JOGO ================================================
+#ab_1: Condições que tornam o virar de cartas possível + controle de quantas cartas podem ser viradas
+#ab_2: É preciso 4 vars que receberão os conteúdos das cartas clicadas, as 2 primeiras recebem e passam às 2 últimas
+#ab_3: As condições que que viram e controlam a quantidade (são 3, e são interdependentes)
+#ab_4: Verificar cartas gêmeas (apenas quando "card1" e "card2" estiverem clicadas, ou seja, receberam conteúdo)
+#ab_5: Observar a pontuação do jogo para determinar seu progresso e fim
+#ab_6: Pela pontuação, é lançado um alerta para informar a completação do desafio
+#ab_7: O loop "result" precisa ser parado, por isso foi adicionado returns em "checkVictory"
+#ab_7: Eles será o dado determinante para cancelar o loop
+#ab_8: Configuração da pontuação

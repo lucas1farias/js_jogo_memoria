@@ -1,0 +1,86 @@
+
+
+body {
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  font-family: consolas;
+  color: #0f0;
+  display: grid;
+  grid-template-columns: repeat(7, 90px);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* #aa_8 */
+.box {
+  position: relative;
+  width: 90px;
+  height: 120px;
+}
+
+/* #aa_8 */
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all .5s ease;
+  box-shadow: 0 0 1rem #0f0;
+  border: solid 3px black;
+}
+
+/* #aa_8 */
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /* Propriedade usada no estágio inicial (antes: background-color) */
+  background-image: url('../images/back.png');
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0 0 20px #0f0;
+}
+
+/* #aa_8 */
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /* Propriedade usada apenas no estágio inicial (poderia ser background-color) */
+  /* background-image: url('../images/rick.png'); */
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+  text-shadow: 0 0 20px #0f0;
+}
+
+/* #aa_9 */
+/* .card:hover {
+  transform: rotateY(180deg);
+} */
+
+/* #aa_7 */
+.flip {
+  transform: rotateY(180deg);
+}
+
+/* #ab_4: Se acertar, mudar formatação das cartas acertadas */
+.disabled-card {
+  filter: saturate(0);
+}
+
+/* #ab_8 */
+.score, .label {
+  display: inline;
+  color: #fff;
+  text-shadow: 0 0 2rem #fff;
+  font-size: 1.5rem;
+}
